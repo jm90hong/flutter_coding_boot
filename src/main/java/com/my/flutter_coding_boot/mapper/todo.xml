@@ -14,14 +14,16 @@
 	
 	<select id="getAll" resultType="Todo">
 		SELECT * FROM todo
+		ORDER BY todo_idx DESC
 	</select>
 	
 	
 	<insert id="add" parameterType="Todo">
 		INSERT INTO todo
-		(type,title,created_date)
+		(type, title, created_date)
 		VALUES
-		(#{type},#{title},SYSDATE())
+		(#{type}, #{title}, SYSDATE())
 	</insert>
-
+	
+	
 </mapper> 
