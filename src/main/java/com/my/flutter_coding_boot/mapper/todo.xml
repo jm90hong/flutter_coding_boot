@@ -3,10 +3,19 @@
 	 		
 	
 	
+	<update id="updateCom" parameterType="Todo">
+		UPDATE todo
+		SET
+			complete_ny=#{complete_ny}
+		WHERE
+			todo_idx = #{todo_idx}	
+	</update>
+	
 	
 	<select id="getAll" resultType="Todo">
 		SELECT * FROM todo
 	</select>
+	
 	
 	<insert id="add" parameterType="Todo">
 		INSERT INTO todo

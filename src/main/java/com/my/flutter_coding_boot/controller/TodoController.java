@@ -29,7 +29,7 @@ public class TodoController {
 	}
 	
 	
-	@PostMapping("/udpateCom")
+	@PostMapping("/updateCom")
 	public @ResponseBody String udpateCom(
 				@RequestParam(value="todo_idx") int todo_idx,
 				@RequestParam(value="complete_ny") String complete_ny
